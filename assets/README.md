@@ -4,12 +4,25 @@
 
 Coloca las siguientes imágenes en esta carpeta:
 
-### Hero Section
-- **hero-background.jpg** (1920x1080px)
+### Mockups (PRIORITARIOS) ⭐
+- **mockup-laptop.png** (1200x800px o superior)
+  - Mockup de tu producto/sitio web en laptop
+  - Fondo transparente (PNG)
+  - Usado en: Hero, Portfolio y CTA Final
+  - **IMPORTANTE:** Este mockup se usa en 3 lugares diferentes
+
+- **mockup-mobile.png** (800x1200px o superior)  
+  - Mockup de tu producto/sitio web en móvil
+  - Fondo transparente (PNG)
+  - Usado en: Sección Responsive y Portfolio
+  - **IMPORTANTE:** Este mockup se usa en 2 lugares diferentes
+
+### Hero Background (Slideshow)
+- Las imágenes del slideshow se cargan desde Unsplash
+- Puedes reemplazarlas por tus propias imágenes si lo deseas
   - Foto estilo clínica deportiva moderna
   - Ambiente limpio, luminoso
   - Puede incluir: camilla de fisioterapia, espacio minimalista, equipamiento profesional
-  - Sugerencia: Unsplash, Pexels - buscar "physiotherapy clinic modern" o "sports therapy"
 
 ### Portfolio
 - **portfolio-avant.jpg** (600x400px)
@@ -24,15 +37,16 @@ Coloca las siguientes imágenes en esta carpeta:
   - Mockup de clínica premium
   - Diseño elegante, colores neutros
 
-### Mockups
-- **mockup-laptop.png** (1200x800px)
-  - Mockup de laptop mostrando un diseño web
-  - Fondo transparente o blanco
-  - Sugerencia: usar Smartmockups.com o similar
+### Ubicación de los Mockups en el Sitio
 
-- **mockup-mobile.png** (800x1200px)
-  - Mockup de móvil mostrando diseño responsive
-  - Fondo transparente o blanco
+**mockup-laptop.png** aparece en:
+1. **Hero Section** - Debajo del título principal (centrado, grande)
+2. **Portfolio** - Lado izquierdo de la grid de mockups
+3. **CTA Final** - Antes del formulario de contacto
+
+**mockup-mobile.png** aparece en:
+1. **Sección Responsive Design** - Nueva sección después de "Por qué elegirnos"
+2. **Portfolio** - Lado derecho de la grid de mockups
 
 ## Recursos Recomendados
 

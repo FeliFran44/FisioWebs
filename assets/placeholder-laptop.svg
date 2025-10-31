@@ -1,0 +1,24 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A2A43;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#26C281;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Laptop body -->
+  <rect x="50" y="50" width="1100" height="650" rx="20" fill="url(#grad1)" opacity="0.1"/>
+  <rect x="70" y="70" width="1060" height="600" rx="10" fill="#F9FAFB"/>
+  
+  <!-- Screen content -->
+  <rect x="100" y="100" width="1000" height="540" rx="5" fill="white"/>
+  
+  <!-- Text -->
+  <text x="600" y="350" font-family="Montserrat, Arial" font-size="48" font-weight="bold" fill="#0A2A43" text-anchor="middle">FisioWebs</text>
+  <text x="600" y="400" font-family="Inter, Arial" font-size="24" fill="#26C281" text-anchor="middle">Mockup Laptop</text>
+  <text x="600" y="450" font-family="Inter, Arial" font-size="18" fill="#6B7280" text-anchor="middle">Reemplaza con: assets/mockup-laptop.png</text>
+  
+  <!-- Laptop base -->
+  <rect x="30" y="700" width="1140" height="15" rx="3" fill="#0A2A43" opacity="0.3"/>
+  <rect x="400" y="715" width="400" height="5" rx="2" fill="#0A2A43" opacity="0.2"/>
+</svg>

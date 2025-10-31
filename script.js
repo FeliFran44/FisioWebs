@@ -346,11 +346,51 @@ heroSection?.addEventListener('mouseleave', () => {
 });
 
 // ===========================
+// MOCKUP ANIMATIONS
+// ===========================
+// Animación especial para mockups al hacer scroll
+const mockupObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animation = 'fadeInUp 1s ease forwards';
+            mockupObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.2,
+    rootMargin: '0px 0px -100px 0px'
+});
+
+// Observar todos los mockups
+document.querySelectorAll('.mockup-hero, .mockup-responsive, .mockup-portfolio-laptop, .mockup-portfolio-mobile, .mockup-cta').forEach(mockup => {
+    mockupObserver.observe(mockup);
+});
+
+// ===========================
+// MOCKUP FALLBACK
+// ===========================
+// Detectar si los mockups reales existen, si no, usar placeholders
+document.querySelectorAll('.mockup-hero, .mockup-portfolio-laptop, .mockup-cta').forEach(img => {
+    img.onerror = function() {
+        this.src = 'assets/placeholder-laptop.svg';
+        console.log('⚠️ mockup-laptop.png no encontrado, usando placeholder');
+    };
+});
+
+document.querySelectorAll('.mockup-responsive, .mockup-portfolio-mobile').forEach(img => {
+    img.onerror = function() {
+        this.src = 'assets/placeholder-mobile.svg';
+        console.log('⚠️ mockup-mobile.png no encontrado, usando placeholder');
+    };
+});
+
+// ===========================
 // INITIALIZE ON LOAD
 // ===========================
 window.addEventListener('DOMContentLoaded', () => {
     console.log('FisioWebs.com loaded successfully! 🚀');
     console.log(`Hero slideshow: ${heroImages.length} images rotating every ${slideInterval/1000} seconds`);
+    console.log('Mockup animations initialized for all devices');
     
     // Add loading animation
     document.body.style.opacity = '0';

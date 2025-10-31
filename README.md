@@ -4,14 +4,17 @@ Sitio web completo para **FisioWebs.com**, estudio digital especializado en crea
 
 ## 🎨 Características
 
-- ✅ Diseño premium moderno y profesional
+- ✅ Diseño premium moderno y profesional (estilo Apple health-tech)
 - ✅ 100% Responsive (mobile, tablet, desktop)
+- ✅ **Mockups integrados en 5 ubicaciones** (Hero, Responsive, Portfolio, CTA)
 - ✅ Animaciones suaves y micro-interacciones
-- ✅ Formulario de contacto funcional
+- ✅ Hero con slideshow de 6 imágenes (cada 6 segundos)
+- ✅ Formulario de contacto con Typeform embed
 - ✅ Navegación fluida con scroll suave
 - ✅ Optimizado para rendimiento
 - ✅ Botones flotantes (WhatsApp + Back to top)
 - ✅ SEO-friendly
+- ✅ WhatsApp e Instagram configurados
 
 ## 🛠️ Stack Tecnológico
 
@@ -142,13 +145,34 @@ El formulario está configurado para mostrar los datos en consola. Para enviarlo
 ## 📱 Secciones Incluidas
 
 1. **Navbar** - Navegación fija con efecto scroll
-2. **Hero** - Sección principal con llamado a la acción
+2. **Hero** - Sección principal con slideshow + mockup laptop
 3. **Por qué elegirnos** - 4 beneficios clave
-4. **Portfolio** - 3 proyectos + mockups
-5. **Servicios/Planes** - 3 planes con precios
-6. **Proceso** - 4 pasos del servicio
-7. **Contacto** - Formulario completo
-8. **Footer** - Información y enlaces
+4. **Diseño Responsive** - ⭐ Nueva sección con mockup mobile
+5. **Portfolio** - 3 proyectos + mockups duales (laptop + mobile)
+6. **Servicios/Planes** - 3 planes con precios
+7. **Proceso** - 4 pasos del servicio
+8. **CTA Final** - ⭐ Nueva sección con mockup laptop
+9. **Contacto** - Formulario Typeform
+10. **Footer** - Información y enlaces
+
+## 🖼️ Mockups del Producto
+
+El sitio está diseñado para mostrar tus mockups en **5 ubicaciones estratégicas**:
+
+### Archivos Necesarios
+Coloca estos archivos en la carpeta `/assets`:
+- `mockup-laptop.png` (1200x800px, PNG transparente)
+- `mockup-mobile.png` (800x1200px, PNG transparente)
+
+### Ubicaciones
+1. **Hero Section** - Mockup laptop debajo del título
+2. **Sección Responsive** - Mockup mobile con features
+3. **Portfolio** - Ambos mockups en grid
+4. **CTA Final** - Mockup laptop antes del formulario
+
+**Nota:** Si no subes los mockups, se mostrarán placeholders SVG automáticamente.
+
+📖 **Documentación completa:** `MOCKUPS-INTEGRATION.md`
 
 ## 🎨 Paleta de Colores
 
