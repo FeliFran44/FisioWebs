@@ -241,6 +241,27 @@ h1, h2, h3, h4, h5, h6 {
     gap: var(--spacing-xl);
 }
 
+.plan-price .amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-blue);
+    transition: all 0.2s ease;
+}
+
+.plan-hosting-info {
+    font-size: 0.85rem;
+    color: var(--color-dark-gray);
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+.plan-additional {
+    font-size: 0.8rem;
+    color: var(--color-mint);
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+    min-height: 1rem;
+}
+
 .logo {
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -795,6 +816,58 @@ h1, h2, h3, h4, h5, h6 {
 .services {
     padding: var(--spacing-3xl) 0;
     background: var(--color-light-gray);
+}
+
+/* Years Selector */
+.years-selector-container {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2xl);
+    margin: var(--spacing-2xl) auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+}
+
+.years-selector-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-blue);
+    margin-bottom: var(--spacing-lg);
+    font-weight: 600;
+}
+
+.years-selector {
+    margin-bottom: var(--spacing-md);
+}
+
+.years-dropdown {
+    font-family: var(--font-ui);
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--color-light-gray);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    color: var(--color-blue);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    min-width: 150px;
+}
+
+.years-dropdown:hover {
+    border-color: var(--color-mint);
+}
+
+.years-dropdown:focus {
+    outline: none;
+    border-color: var(--color-mint);
+    box-shadow: 0 0 0 3px rgba(38, 194, 129, 0.1);
+}
+
+.years-info {
+    color: var(--color-dark-gray);
+    font-size: 0.95rem;
+    margin: 0;
 }
 
 .plans-grid {
@@ -1535,6 +1608,21 @@ h1, h2, h3, h4, h5, h6 {
     
     .responsive-features {
         gap: var(--spacing-md);
+    }
+    
+    .years-selector-container {
+        margin: var(--spacing-lg) auto;
+        padding: var(--spacing-lg);
+    }
+    
+    .years-selector-title {
+        font-size: 1.25rem;
+    }
+    
+    .years-dropdown {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        min-width: 120px;
     }
     
     .feature-item {

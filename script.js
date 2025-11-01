@@ -415,12 +415,69 @@ legalLinks.forEach(link => {
 });
 
 // ===========================
+// DYNAMIC PRICING CALCULATOR
+// ===========================
+// Base prices (includes 1 year domain/hosting)
+const basePrices = {
+    starter: 149,    // Landing Starter
+    complete: 299,   // Sitio Completo  
+    premium: 499     // Sitio + Turnos Online
+};
+
+// Cost per additional year
+const additionalYearCost = 15;
+
+function updatePrices() {
+    const selectedYears = parseInt(document.getElementById('yearsSelect').value);
+    const additionalYears = selectedYears - 1;
+    const extraCost = additionalYears * additionalYearCost;
+    
+    // Update each plan price
+    Object.keys(basePrices).forEach(plan => {
+        const priceElement = document.getElementById(`price-${plan}`);
+        const additionalElement = document.getElementById(`additional-${plan}`);
+        
+        if (priceElement && additionalElement) {
+            const finalPrice = basePrices[plan] + extraCost;
+            
+            // Animate price change
+            priceElement.style.opacity = '0.5';
+            setTimeout(() => {
+                priceElement.textContent = finalPrice;
+                priceElement.style.opacity = '1';
+            }, 100);
+            
+            // Update additional years text
+            if (additionalYears > 0) {
+                additionalElement.textContent = `+ ${additionalYears} año${additionalYears > 1 ? 's' : ''} adicional${additionalYears > 1 ? 'es' : ''}`;
+            } else {
+                additionalElement.textContent = '';
+            }
+        }
+    });
+}
+
+// Initialize pricing calculator
+function initPricingCalculator() {
+    const yearsSelect = document.getElementById('yearsSelect');
+    if (yearsSelect) {
+        yearsSelect.addEventListener('change', updatePrices);
+        // Set initial state
+        updatePrices();
+    }
+}
+
+// ===========================
 // INITIALIZE ON LOAD
 // ===========================
 window.addEventListener('DOMContentLoaded', () => {
     console.log('FisioWebs.com loaded successfully! 🚀');
     console.log('Hero con fondo verde fijo - sin slideshow');
     console.log('Mockups con rutas: pcmockup.png y movilmockup.png');
+    console.log('Dynamic pricing calculator initialized');
+    
+    // Initialize pricing calculator
+    initPricingCalculator();
     
     // Add loading animation
     document.body.style.opacity = '0';

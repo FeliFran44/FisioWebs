@@ -231,15 +231,32 @@
                 <p class="section-subtitle">Elegí el plan que mejor se adapte a las necesidades de tu clínica.</p>
                 <div class="section-divider"></div>
             </div>
+            
+            <!-- Years Selector -->
+            <div class="years-selector-container fade-in">
+                <h3 class="years-selector-title">Elegí por cuántos años querés tu web online:</h3>
+                <div class="years-selector">
+                    <select id="yearsSelect" class="years-dropdown">
+                        <option value="1">1 año</option>
+                        <option value="2">2 años</option>
+                        <option value="3">3 años</option>
+                        <option value="4">4 años</option>
+                        <option value="5">5 años</option>
+                    </select>
+                </div>
+                <p class="years-info">Incluye dominio y hosting por el período seleccionado</p>
+            </div>
             <div class="plans-grid">
                 <div class="plan-card fade-in">
                     <div class="plan-header">
                         <h3>Landing Starter</h3>
                         <div class="plan-price">
                             <span class="currency">USD</span>
-                            <span class="amount">149</span>
+                            <span class="amount" id="price-starter">149</span>
                         </div>
                         <p class="plan-period">Pago único</p>
+                        <p class="plan-hosting-info">Incluye 1 año de dominio y hosting</p>
+                        <p class="plan-additional" id="additional-starter"></p>
                     </div>
                     <ul class="plan-features">
                         <li><i class="fas fa-check"></i> Página única profesional</li>
@@ -258,9 +275,11 @@
                         <h3>Sitio Completo</h3>
                         <div class="plan-price">
                             <span class="currency">USD</span>
-                            <span class="amount">299</span>
+                            <span class="amount" id="price-complete">299</span>
                         </div>
                         <p class="plan-period">Pago único</p>
+                        <p class="plan-hosting-info">Incluye 1 año de dominio y hosting</p>
+                        <p class="plan-additional" id="additional-complete"></p>
                     </div>
                     <ul class="plan-features">
                         <li><i class="fas fa-check"></i> 5 secciones personalizadas</li>
@@ -280,9 +299,11 @@
                         <h3>Sitio + Turnos Online</h3>
                         <div class="plan-price">
                             <span class="currency">USD</span>
-                            <span class="amount">499</span>
+                            <span class="amount" id="price-premium">499</span>
                         </div>
                         <p class="plan-period">Pago único</p>
+                        <p class="plan-hosting-info">Incluye 1 año de dominio y hosting</p>
+                        <p class="plan-additional" id="additional-premium"></p>
                     </div>
                     <ul class="plan-features">
                         <li><i class="fas fa-check"></i> Todo del plan Completo</li>
