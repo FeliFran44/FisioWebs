@@ -22,13 +22,14 @@
         <div class="container">
             <div class="nav-content">
                 <a href="#" class="logo">FisioWebs<span>.com</span></a>
-                <ul class="nav-menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#contacto" class="nav-link">Presupuesto</a></li>
+                    <li><a href="#contacto" class="nav-link btn btn-primary-nav">Quiero mi web</a></li>
                 </ul>
-                <a href="#contacto" class="btn btn-primary-small">Quiero mi web</a>
                 <button class="mobile-menu-toggle">
                     <span></span>
                     <span></span>
@@ -40,17 +41,6 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-            <div class="hero-slideshow">
-                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&h=1080&fit=crop" alt="Clínica moderna 1" class="hero-image active">
-                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920&h=1080&fit=crop" alt="Clínica moderna 2" class="hero-image">
-                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&h=1080&fit=crop" alt="Fisioterapia deportiva" class="hero-image">
-                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1920&h=1080&fit=crop" alt="Terapia física" class="hero-image">
-                <img src="https://images.unsplash.com/photo-1512069510088-c0a6ad194f0e?w=1920&h=1080&fit=crop" alt="Rehabilitación" class="hero-image">
-                <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1920&h=1080&fit=crop" alt="Clínica premium" class="hero-image">
-            </div>
-        </div>
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title fade-in-up">FisioWebs<span>.com</span></h1>
@@ -68,11 +58,6 @@
                         Ver ejemplos
                         <i class="fas fa-eye"></i>
                     </a>
-                </div>
-                
-                <!-- Mockup Laptop Hero -->
-                <div class="hero-mockup fade-in-up">
-                    <img src="assets/mockup-laptop.png" alt="Mockup FisioWebs Laptop" class="mockup-hero" />
                 </div>
             </div>
         </div>
@@ -196,9 +181,8 @@
                     <div class="portfolio-content">
                         <h3>Modelo Deportivo Moderno</h3>
                         <p>Diseño enfocado en fisioterapia deportiva con secciones dinámicas y portfolio visual.</p>
-                        <a href="#" class="btn btn-outline">
-                            Ver demo
-                            <i class="fas fa-play"></i>
+                        <a href="#" class="btn btn-outline btn-disabled" style="cursor: not-allowed; pointer-events: none;">
+                            Demo en preparación
                         </a>
                     </div>
                 </div>
@@ -212,9 +196,8 @@
                     <div class="portfolio-content">
                         <h3>Modelo Clínica Premium</h3>
                         <p>Diseño elegante y profesional ideal para clínicas multidisciplinarias.</p>
-                        <a href="#" class="btn btn-outline">
-                            Ver demo
-                            <i class="fas fa-play"></i>
+                        <a href="#" class="btn btn-outline btn-disabled" style="cursor: not-allowed; pointer-events: none;">
+                            Demo en preparación
                         </a>
                     </div>
                 </div>
@@ -263,7 +246,7 @@
                         <li><i class="fas fa-check"></i> Diseño responsive</li>
                         <li><i class="fas fa-check"></i> Formulario de contacto</li>
                         <li><i class="fas fa-check"></i> SEO básico</li>
-                        <li><i class="fas fa-check"></i> Hosting primer año</li>
+                        <li><i class="fas fa-check"></i> Alojamiento opcional administrado por FisioWebs</li>
                         <li><i class="fas fa-check"></i> Soporte 30 días</li>
                     </ul>
                     <a href="#contacto" class="btn btn-outline-full">Solicitar presupuesto</a>
@@ -286,7 +269,7 @@
                         <li><i class="fas fa-check"></i> SEO optimizado</li>
                         <li><i class="fas fa-check"></i> Galería de servicios</li>
                         <li><i class="fas fa-check"></i> Blog/Noticias</li>
-                        <li><i class="fas fa-check"></i> Hosting primer año</li>
+                        <li><i class="fas fa-check"></i> Alojamiento opcional administrado por FisioWebs</li>
                         <li><i class="fas fa-check"></i> Soporte 60 días</li>
                     </ul>
                     <a href="#contacto" class="btn btn-primary-full">Solicitar presupuesto</a>
@@ -303,12 +286,10 @@
                     </div>
                     <ul class="plan-features">
                         <li><i class="fas fa-check"></i> Todo del plan Completo</li>
-                        <li><i class="fas fa-check"></i> Sistema de turnos online</li>
-                        <li><i class="fas fa-check"></i> Integración calendario</li>
-                        <li><i class="fas fa-check"></i> Recordatorios automáticos</li>
-                        <li><i class="fas fa-check"></i> Panel de administración</li>
-                        <li><i class="fas fa-check"></i> Capacitación incluida</li>
-                        <li><i class="fas fa-check"></i> Hosting primer año</li>
+                        <li><i class="fas fa-check"></i> Integración de turnos con Calendly o Google Calendar</li>
+                        <li><i class="fas fa-check"></i> Recordatorios automáticos gestionados por la herramienta integrada</li>
+                        <li><i class="fas fa-check"></i> Capacitación de uso</li>
+                        <li><i class="fas fa-check"></i> Alojamiento opcional administrado por FisioWebs</li>
                         <li><i class="fas fa-check"></i> Soporte 90 días</li>
                     </ul>
                     <a href="#contacto" class="btn btn-outline-full">Solicitar presupuesto</a>
@@ -368,7 +349,7 @@
             <div class="cta-wrapper">
                 <!-- Mockup Laptop CTA Final -->
                 <div class="cta-mockup fade-in">
-                    <img src="assets/mockup-laptop.png" alt="Mockup FisioWebs Laptop" class="mockup-cta" />
+                    <img src="assets/pcmockup.png" alt="Mockup FisioWebs Laptop" class="mockup-cta" />
                 </div>
                 <div class="cta-content fade-in">
                     <h2>¿Listo para transformar tu presencia digital?</h2>
@@ -408,7 +389,7 @@
                             <i class="fas fa-award"></i>
                             <div>
                                 <strong>Garantía de calidad</strong>
-                                <p>100% satisfacción o te devolvemos tu dinero</p>
+                                <p>Ajustes incluidos y soporte post-entrega</p>
                             </div>
                         </div>
                     </div>
@@ -464,6 +445,13 @@
                             <li><a href="https://www.instagram.com/fisio_a.m/" target="_blank">Instagram</a></li>
                         </ul>
                     </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#terminos">Términos y condiciones</a></li>
+                            <li><a href="#privacidad">Política de privacidad</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -472,8 +460,24 @@
         </div>
     </footer>
 
+    <!-- Términos y Condiciones -->
+    <section id="terminos" class="legal-section" style="display: none;">
+        <div class="container">
+            <h2>Términos y Condiciones</h2>
+            <p>Contenido de términos y condiciones. Este texto será actualizado próximamente con información detallada sobre el uso de los servicios de FisioWebs.com.</p>
+        </div>
+    </section>
+
+    <!-- Política de Privacidad -->
+    <section id="privacidad" class="legal-section" style="display: none;">
+        <div class="container">
+            <h2>Política de Privacidad</h2>
+            <p>Contenido de política de privacidad. Este texto será actualizado próximamente con información sobre cómo manejamos y protegemos tus datos personales.</p>
+        </div>
+    </section>
+
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/598091511615" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/598091511615" class="whatsapp-float" target="_blank" aria-label="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
