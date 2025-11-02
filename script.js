@@ -468,6 +468,65 @@ function initPricingCalculator() {
 }
 
 // ===========================
+// CONTACT FORM HANDLER
+// ===========================
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('formSuccess');
+    
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent default form submission
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitBtn.disabled = true;
+            
+            try {
+                const formData = new FormData(form);
+                
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    form.reset();
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'center' 
+                    });
+                    
+                    // Hide success message after 10 seconds
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 10000);
+                } else {
+                    throw new Error('Error en el envío');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Hubo un error al enviar el formulario. Por favor, intentá nuevamente.');
+            } finally {
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+}
+
+// ===========================
 // INITIALIZE ON LOAD
 // ===========================
 window.addEventListener('DOMContentLoaded', () => {
@@ -475,9 +534,13 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log('Hero con fondo verde fijo - sin slideshow');
     console.log('Mockups con rutas: pcmockup.png y movilmockup.png');
     console.log('Dynamic pricing calculator initialized');
+    console.log('Contact form handler initialized');
     
     // Initialize pricing calculator
     initPricingCalculator();
+    
+    // Initialize contact form
+    initContactForm();
     
     // Add loading animation
     document.body.style.opacity = '0';

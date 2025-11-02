@@ -416,8 +416,57 @@
                     </div>
                 </div>
                 <div class="contact-form-wrapper">
-                    <div data-tf-live="01K8W8YDH49GA21GE7YW9HXGJ7"></div>
-                    <script src="//embed.typeform.com/next/embed.js"></script>
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/myzbbvba" method="POST">
+                        <!-- Formspree configuration -->
+                        <input type="hidden" name="_subject" value="Nueva consulta desde FisioWebs.com">
+                        
+                        <div class="form-header">
+                            <h3>Solicitá tu web para clínica o consultorio</h3>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Nombre Completo *</label>
+                                <input type="text" id="name" name="name" placeholder="👤 Tu nombre completo" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico *</label>
+                                <input type="email" id="email" name="email" placeholder="📧 tu@email.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Número de Teléfono *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="📞 +598 99 123 456" required>
+                            </div>
+                            
+                            <div class="form-group form-group-full">
+                                <label for="webType">¿Qué tipo de web buscás? *</label>
+                                <select id="webType" name="webType" required>
+                                    <option value="">Seleccioná una opción</option>
+                                    <option value="landing">Landing Page</option>
+                                    <option value="completa">Web Completa</option>
+                                    <option value="turnos">Web + Turnos Online</option>
+                                    <option value="asesoria">No estoy seguro (quiero asesoría)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group form-group-full">
+                                <label for="message">Mensaje / Detalles del proyecto</label>
+                                <textarea id="message" name="message" placeholder="💬 Contanos más sobre tu proyecto, necesidades específicas, etc." rows="4"></textarea>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-form">
+                            Enviar consulta
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        
+                        <div id="formSuccess" class="form-success" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Gracias por tu mensaje. Nos pondremos en contacto a la brevedad.</p>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
